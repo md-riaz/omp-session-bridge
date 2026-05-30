@@ -1,28 +1,27 @@
 {
-  "name": "oh-my-pi-harness",
+  "name": "omp-session-bridge",
   "version": "0.1.0",
-  "description": "Pi Coding Agent extension that registers the current session as an Oh My Pi harness target and exposes a small local control/status bridge.",
+  "description": "OMP extension that bridges the active OMP session to a local status, event stream, and command API.",
   "keywords": [
-    "pi-package",
-    "pi-coding-agent",
-    "oh-my-pi",
-    "harness",
+    "omp",
+    "session-bridge",
+    "remote-control",
     "automation"
   ],
-  "main": "oh-my-pi-harness.ts",
+  "main": "omp-session-bridge.ts",
   "files": [
-    "oh-my-pi-harness.ts",
-    "oh-my-pi-harness-server.mjs",
+    "omp-session-bridge.ts",
+    "omp-session-bridge-server.mjs",
     "README.md",
     "LICENSE"
   ],
   "pi": {
     "extensions": [
-      "./oh-my-pi-harness.ts"
+      "./omp-session-bridge.ts"
     ]
   },
   "scripts": {
-    "harness:server": "node oh-my-pi-harness-server.mjs"
+    "bridge:server": "node omp-session-bridge-server.mjs"
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": ">=0.60.0"
