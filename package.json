@@ -1,0 +1,31 @@
+{
+  "name": "oh-my-pi-harness",
+  "version": "0.1.0",
+  "description": "Pi Coding Agent extension that registers the current session as an Oh My Pi harness target and exposes a small local control/status bridge.",
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "oh-my-pi",
+    "harness",
+    "automation"
+  ],
+  "main": "oh-my-pi-harness.ts",
+  "files": [
+    "oh-my-pi-harness.ts",
+    "oh-my-pi-harness-server.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./oh-my-pi-harness.ts"
+    ]
+  },
+  "scripts": {
+    "harness:server": "node oh-my-pi-harness-server.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.60.0"
+  },
+  "license": "MIT"
+}
